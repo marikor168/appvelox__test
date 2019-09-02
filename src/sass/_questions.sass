@@ -1,0 +1,191 @@
+.questions
+  width: 70%
+  margin-left: auto
+  margin-right: auto
+  margin-top: 200px
+  margin-bottom: 40px
+  &__title
+    text-align: center
+    font-weight: 300
+    margin-bottom: 40px
+    font-size: 27px
+  &__subtitle
+    text-align: center
+    font-weight: 300
+    font-size: 17px
+  &-categories
+    text-align: center
+    width: 80%
+    margin-left: auto
+    margin-right: auto
+    margin-top: 50px
+    margin-bottom: 60px
+  &-cat
+    display: inline-block
+    width: 12%
+    font-size: 15px
+    text-align: center
+  &__feedback
+    text-align: center
+    width: 53%
+    margin: 80px auto
+    line-height: 2
+    font-weight: 300
+.form
+  font-weight: 400
+  cursor: pointer
+.tel
+  text-decoration: none
+  color: $text-color
+  font-weight: 400
+.cat-word
+  color: $text-color
+  text-decoration: none
+  &-active
+    color: #ffffff
+    background: $green
+    border-radius: 17px
+    padding: 7px 17px
+.question
+  width: 90%
+  margin: 20px auto
+  border: 1px solid #f4f4f4
+  z-index: 3
+  cursor: pointer
+  &__title
+    background: #f4f4f4
+    padding: 15px 30px
+    position: relative
+    z-index: -1   
+    cursor: pointer
+  &__text
+    padding: 20px 30px
+    font-size: 14px
+.arrow
+  position: absolute
+  right: 30px
+  top: 22px
+  cursor: pointer
+.spinRight 
+  animation-name: spinRight
+  animation-duration: 1s
+@keyframes spinRight
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(180deg)
+.spinLeft
+  animation-name: spinLeft
+  animation-duration: 1s
+@keyframes spinLeft
+  0%
+    transform: rotate(-180deg)
+  100%
+    transform: rotate(-360deg)
+.fadeInDown
+  animation-name: fadeInDown
+  animation-duration: 1s
+  animation-timing-function: ease-out
+@keyframes fadeInDown
+  0%
+    transform: translate3d(0, -15%, 0)
+    opacity: 0
+  100%
+    transform: none
+    opacity: 1
+.fadeOutUp
+  animation-name: fadeOutUp
+  animation-duration: 1s
+@keyframes fadeOutUp
+  0%
+    opacity: 1
+  100% 
+    transform: translate3d(0, -100%, 0)
+    opacity: 0
+.overlay
+  position: fixed
+  display: none
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 3
+.popup
+  position: fixed
+  z-index: 4
+  left: 50%
+  top: 150px
+  width: 752px
+  transform: translateX(-50%)
+  &-close
+    position: absolute
+    right: -20px
+    top: -35px
+    cursor: pointer
+    font-size: 35px
+    color: #fff
+    font-weight: 300
+  &-title
+    display: block
+    width: 100%
+    height: 71px
+    line-height: 71px
+    margin: 0
+    background-color: $green
+    color: #ffffff
+    text-transform: uppercase
+    font-size: 21px
+    font-weight: 500
+    text-align: center
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+  &-form
+    background-color: #ffffff
+    padding: 35px 88px 50px 88px
+    color: #000000
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    &__item
+      height: 60px
+    &__label
+      display: inline-block
+      font-size: 16px
+      margin-top: 10px
+    &__input
+      width: 250px
+      height: 40px
+      font-size: 16px
+      background-color: #ffffff
+      border: 1px solid $green
+      color: #000000
+      text-align: center
+      float: right
+      border-radius: 5px
+      box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.15)
+    &__question
+      border: 1px solid $green
+      float: right
+      width: 250px
+      border-radius: 5px
+      box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.15)
+    &__btn
+      cursor: pointer
+      font-size: 16px
+      font-weight: 400
+      margin-top: 20px
+      display: block
+      margin-left: auto
+      margin-right: auto
+.textarea
+  height: 100px
+  & .popup-form__label
+    margin-top: 30px
+
+
+      
+
+
+
+
+
+  

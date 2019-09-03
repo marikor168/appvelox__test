@@ -7,12 +7,14 @@ window.addEventListener('DOMContentLoaded', function () {
       slider = require('./parts/slider.js'),
       hideHeader = require('./parts/hideHeader.js'),
       principles = require('./parts/principles.js'),
-      menu = require('./parts/menu.js');
+      menu = require('./parts/menu.js'),
+      modal = require('./parts/modalMain.js');
 
   tabs();
   slider();
   hideHeader();
   menu();
+  modal();
 
   if (window.innerWidth <= 1260) {
   principles();

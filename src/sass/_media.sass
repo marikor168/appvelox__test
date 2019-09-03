@@ -17,7 +17,7 @@
     &-menu
       &__link
         display: none
-        &:first-child
+        &:last-child
           display: inline-block
           vertical-align: middle
       & img
@@ -30,6 +30,9 @@
     &-cat
       width: 20%
       margin-top: 15px
+  .customers
+    &-wrap
+      width: 80%
 @media (max-width: 1480px)
   .header
     &-button
@@ -49,9 +52,6 @@
       float: right
       width: 75%
       margin-left: 0
-  .customers
-    &-wrap
-      width: 70%
 @media (max-width: 1330px)
   .slider
     &-block
@@ -110,6 +110,8 @@
     &-item
       width: 30%
       margin-right: 0
+      & img
+        height: 60px
   .services
     overflow: hidden
     &-header
@@ -121,7 +123,7 @@
     &-customers
       display: none
     &-logo
-      line-height: 90px
+      line-height: 100px
       margin-top: 5px
     &-wrap
       vertical-align: middle
@@ -148,7 +150,6 @@
   .header
     &-text
       margin-top: 60px
-      margin-bottom: 0
       width: 70%
   .blog
     width: 90%
@@ -183,9 +184,10 @@
       margin-left: auto
       margin-right: auto
       margin-bottom: 30px
+      width: 50%
       & img
-        margin-left: auto
-        margin-right: auto
+        width: 100%
+        height: auto
 @media (max-width: 768px)
   .header
     &-nav
@@ -193,6 +195,8 @@
       padding-right: 0
     &-subtitle
       margin-bottom: 40px
+    &-menu__link  
+      padding: 0
   .services
     &-tabcontent__wrapper
       padding-top: 40px
@@ -225,6 +229,11 @@
   .arrow
     right: 15px
 @media (max-width: 576px)
+  .header
+    &-title
+      font-size: 25px
+    &-subtitle
+      font-size: 16px
   .slider
     &-block
       width: 90%
@@ -244,11 +253,28 @@
       display: none
     &__copyright
       margin-right: 0
+  .customers
+    &-item
+      width: 70%
 @media (max-width: 520px)
   .questions
     &-cat
       width: 49%
+  .principles
+    &-img
+      & img
+        max-width: 100%
+    &-text
+      width: 100%
 @media (max-width: 450px)
+  .header
+    &-logo
+      max-width: 60%
+      & img
+        max-width: 70%
+  .hamburger
+    width: 68px
+    height: 60px
   .questions
     &-cat
       width: 70%

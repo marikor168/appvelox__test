@@ -402,11 +402,16 @@ module.exports = menu;
 function modal() {
   var more = document.querySelector('.form'),
       modal = document.querySelector('.overlay'),
+      btn = document.querySelector('.header-button .button'),
       form = document.querySelector('.popup form'),
       inputsForm = form.getElementsByTagName('input'),
       inputName = inputsForm[0],
       inputPhone = inputsForm[1];
   more.addEventListener('click', function () {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+  btn.addEventListener('click', function () {
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
   });

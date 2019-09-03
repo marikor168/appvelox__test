@@ -1,16 +1,10 @@
-function modal() {
-  let more = document.querySelector('.form'),
-      modal = document.querySelector('.overlay'),
+function modalMain() {
+  let modal = document.querySelector('.overlay'),
       btn = document.querySelector('.header-button .button'),
       form = document.querySelector('.popup form'),
       inputsForm = form.getElementsByTagName('input'),
       inputName = inputsForm[0],
       inputPhone = inputsForm[1];
-
-  more.addEventListener('click', () => {
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-  });
 
   btn.addEventListener('click', () => {
     modal.style.display = 'block';
@@ -33,4 +27,4 @@ function modal() {
   });
 }
 
-module.exports = modal;
+module.exports = modalMain;

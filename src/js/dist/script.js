@@ -421,6 +421,42 @@ module.exports = menu;
 
 /***/ }),
 
+/***/ "./src/js/parts/modalMain.js":
+/*!***********************************!*\
+  !*** ./src/js/parts/modalMain.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function modalMain() {
+  var modal = document.querySelector('.overlay'),
+      btn = document.querySelector('.header-button .button'),
+      form = document.querySelector('.popup form'),
+      inputsForm = form.getElementsByTagName('input'),
+      inputName = inputsForm[0],
+      inputPhone = inputsForm[1];
+  btn.addEventListener('click', function () {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  });
+  document.body.addEventListener('click', function (event) {
+    if (event.target.classList.contains('overlay') || event.target.classList.contains('popup-close')) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  });
+  inputName.addEventListener('input', function () {
+    inputName.value = inputName.value.replace(/[^a-zа-яё]/ig, "");
+  });
+  inputPhone.addEventListener('input', function () {
+    inputPhone.value = inputPhone.value.replace(/[^0-9+]/g, "");
+  });
+}
+
+module.exports = modalMain;
+
+/***/ }),
+
 /***/ "./src/js/parts/principles.js":
 /*!************************************!*\
   !*** ./src/js/parts/principles.js ***!
@@ -729,12 +765,14 @@ window.addEventListener('DOMContentLoaded', function () {
       slider = __webpack_require__(/*! ./parts/slider.js */ "./src/js/parts/slider.js"),
       hideHeader = __webpack_require__(/*! ./parts/hideHeader.js */ "./src/js/parts/hideHeader.js"),
       principles = __webpack_require__(/*! ./parts/principles.js */ "./src/js/parts/principles.js"),
-      menu = __webpack_require__(/*! ./parts/menu.js */ "./src/js/parts/menu.js");
+      menu = __webpack_require__(/*! ./parts/menu.js */ "./src/js/parts/menu.js"),
+      modal = __webpack_require__(/*! ./parts/modalMain.js */ "./src/js/parts/modalMain.js");
 
   tabs();
   slider();
   hideHeader();
   menu();
+  modal();
 
   if (window.innerWidth <= 1260) {
     principles();

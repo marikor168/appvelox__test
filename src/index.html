@@ -27,13 +27,12 @@
         </div>
         <div class="header-wrap">
           <nav class="header-menu">
-            <a href="#" class="header-menu__link">Меню</a>            
             <a href="#" class="header-menu__link">Услуги</a>
             <a href="#" class="header-menu__link">О нас</a>
             <a href="#" class="header-menu__link">Блог</a>
             <a href="questions.html" class="header-menu__link">Вопросы</a>
             <a href="#" class="header-menu__link">Контакты</a>
-            <img src="./img/navigation/Group@2x.png" alt="hamburger" class="hamburger">
+            <a href="#" class="header-menu__link">Меню<img alt="hamburger" src="img/navigation/Group@2x.png" class="hamburger"></a>
           </nav>
           <div class="popup-menu fade">
             <a href="#" class="popup-menu__item">Услуги</a>
@@ -450,7 +449,6 @@
   </section>
 
   <footer class="footer">
-    <!-- <div class="footer-info"> -->
     <div class="footer-menu">
       <a href="#" class="footer-menu__item">Услуги</a>
       <a href="#" class="footer-menu__item">О нас</a>
@@ -458,7 +456,6 @@
       <a href="questions.html" class="footer-menu__item">Вопросы</a>
       <a href="#" class="footer-menu__item">Контакты</a>
     </div>
-    <!-- </div> -->
     <!-- /.footer-info -->
     <div class="footer-wrap-right">
       <div class="footer-contacts">
@@ -481,15 +478,41 @@
     <div class="footer-appvelox">Разработано <img src="./img/appvelox.png" alt="appvelox"></div>
   </footer>
 
-  
-  <!-- <div class="popup-menu fade">
-    <a href="#" class="popup-menu__item">Услуги</a>
-    <a href="#" class="popup-menu__item">О нас</a>
-    <a href="#" class="popup-menu__item">Блог</a>
-    <a href="questions.html" class="popup-menu__item">Вопросы</a>
-    <a href="#" class="popup-menu__item">Контакты</a>
-  </div> -->
-
+  <div class="overlay fade">
+    <div class="popup">
+      <div class="popup-close">&times;
+      </div>
+      <div class="popup-title">
+        Форма обратной связи</div>
+      <div class="popup-form">
+        <form action="#" class="main-form">
+          <div class="popup-form__item">
+            <label class="popup-form__label" for="name">
+              Введите ваше имя:
+            </label>
+            <input class="popup-form__input" name="name" type="text" required placeholder="Иван">
+          </div>
+          <div class="popup-form__item">
+            <label class="popup-form__label" for="phone">
+              Введите ваш номер телефона:
+            </label>
+            <input class="popup-form__input" name="phone" type="tel" required placeholder="+7(999) 000 00 00">
+          </div>
+          <div class="popup-form__item textarea">
+            <label class="popup-form__label" for="question">
+              Введите ваш вопрос:
+            </label>
+            <textarea class="popup-form__question" name="question" cols="30" rows="5" required></textarea>
+          </div>
+          <div class="popup-form__item">
+            <button class="button popup-form__btn">
+              Оставить заявку
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="./js/dist/script.js"></script>
 </body>

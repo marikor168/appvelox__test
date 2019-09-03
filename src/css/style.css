@@ -76,11 +76,7 @@ body {
   padding-left: 25px;
 }
 
-.header-menu__link:first-child {
-  display: none;
-}
-
-.header-menu img {
+.header-menu__link:last-child {
   display: none;
 }
 
@@ -93,7 +89,6 @@ body {
 .header-container {
   margin-top: 90px;
   background: url("../img/иллюстрации/на главную.png") no-repeat center;
-  height: 500px;
   overflow: hidden;
 }
 
@@ -112,6 +107,13 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 80px;
+}
+
+.hamburger {
+  background: url("./../img/navigation/Group@2x.png") center no-repeat;
+  width: 76px;
+  height: 68px;
+  background-size: cover;
 }
 
 .button {
@@ -509,15 +511,13 @@ body {
 .customers-item {
   display: inline-block;
   margin-right: 30px;
-  width: 20%;
+  margin-bottom: 20px;
+  width: 30%;
 }
 
 .customers-item img {
-  height: 60px;
-}
-
-.mobile-lawyer img {
-  height: 53px;
+  height: 80px;
+  width: auto;
 }
 
 .footer {
@@ -1029,7 +1029,7 @@ body {
   .header-menu__link {
     display: none;
   }
-  .header-menu__link:first-child {
+  .header-menu__link:last-child {
     display: inline-block;
     vertical-align: middle;
   }
@@ -1044,6 +1044,9 @@ body {
   .questions-cat {
     width: 20%;
     margin-top: 15px;
+  }
+  .customers-wrap {
+    width: 80%;
   }
 }
 
@@ -1069,9 +1072,6 @@ body {
     float: right;
     width: 75%;
     margin-left: 0;
-  }
-  .customers-wrap {
-    width: 70%;
   }
 }
 
@@ -1150,6 +1150,9 @@ body {
     width: 30%;
     margin-right: 0;
   }
+  .customers-item img {
+    height: 60px;
+  }
   .services {
     overflow: hidden;
   }
@@ -1165,7 +1168,7 @@ body {
     display: none;
   }
   .header-logo {
-    line-height: 90px;
+    line-height: 100px;
     margin-top: 5px;
   }
   .header-wrap {
@@ -1201,7 +1204,6 @@ body {
 @media (max-width: 920px) {
   .header-text {
     margin-top: 60px;
-    margin-bottom: 0;
     width: 70%;
   }
   .blog {
@@ -1242,10 +1244,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    width: 50%;
   }
   .customers-item img {
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1256,6 +1259,9 @@ body {
   }
   .header-subtitle {
     margin-bottom: 40px;
+  }
+  .header-menu__link {
+    padding: 0;
   }
   .services-tabcontent__wrapper {
     padding-top: 40px;
@@ -1300,6 +1306,12 @@ body {
 }
 
 @media (max-width: 576px) {
+  .header-title {
+    font-size: 25px;
+  }
+  .header-subtitle {
+    font-size: 16px;
+  }
   .slider-block {
     width: 90%;
   }
@@ -1323,15 +1335,34 @@ body {
   .footer__copyright {
     margin-right: 0;
   }
+  .customers-item {
+    width: 70%;
+  }
 }
 
 @media (max-width: 520px) {
   .questions-cat {
     width: 49%;
   }
+  .principles-img img {
+    max-width: 100%;
+  }
+  .principles-text {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
+  .header-logo {
+    max-width: 60%;
+  }
+  .header-logo img {
+    max-width: 70%;
+  }
+  .hamburger {
+    width: 68px;
+    height: 60px;
+  }
   .questions-cat {
     width: 70%;
   }
